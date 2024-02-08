@@ -1,0 +1,96 @@
+<!Starr Nakamitsu-->
+<!January 23, 2024-->
+<!CS 341-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
+ 		</script>
+		
+		<link rel="stylesheet" href="cheesecake.css">
+
+	</head>
+
+	<body>
+
+		<!Heading-->
+		<h1>Cheesecake Order Form</h1>
+
+		<!Image of cheesecake-->
+		<img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" alt="Cheesecake.jpg" width="250" height="200">
+		<br>
+
+		<table id="table">
+			<tr>
+				<th>Quanity</th>
+				<th>Topping</th>
+			</tr>
+			
+			<tr>
+				<td>
+					<form>
+
+					<!The drop down for the quanity-->
+					<select id="quantity" name="quantity">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+					</select>
+					</form>
+				</td>
+				<td>
+					<form>
+
+					<!The radio buttons-->
+					<input type="radio" id="plain" name="toppings" value="Plain">
+						<label for="plain">Plain</label><br>
+					<input type="radio" id="cherry" name="toppings" value="Cherry">
+						<label for="cherry">Cherry</label><br>
+					<input type="radio" id="chocolate" name="toppings" value="Chocolate">
+						<label for="chocolate">Chocolate</label>
+					</form>
+				</td>
+			</tr>
+		</table>
+		
+		<!The text area and order button-->
+		<p>Notes:</p>
+
+		<textarea id="message" rows="10" cols="92">Enter any special instructions here.</textarea><br><br>
+	
+		<button type="button" id="orderButton" onclick="readNotesFunction()">Order</button>
+
+		<!Script for order button-->
+		<script src="javascripts/readNotesFunction.js"></script>
+
+
+		<!Dropdown Button-->
+		<!Referenced from https://www.w3schools.com/howto/howto_css_dropdown.asp-->
+		<h3>Orders for </h3>
+		<div class="dropdown">
+			<button class="dropdown-button" id="dropdownButton" value="Jan">Jan</button>
+				<div class="dropdown-content">
+					<a>Jan</a>
+					<a>Feb</a>
+					<a>Mar</a>
+					<a>Apr</a>
+					<a>May</a>
+					<a>Jun</a>
+					<a>Jul</a>
+					<a>Aug</a>
+					<a>Sep</a>
+					<a>Oct</a>
+					<a>Nov</a>
+					<a>Dec</a>
+				</div>
+			<script src="javascripts/dropDown.js"></script>
+		</div>
+		<ul>
+			<li>31 Plain</li>
+			<li>11 Cherry</li>
+			<li>17 Chocolate</li>
+		</ul>
+		
+	</body>
+</html>
